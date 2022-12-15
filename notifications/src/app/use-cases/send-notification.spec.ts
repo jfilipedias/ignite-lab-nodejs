@@ -1,4 +1,5 @@
 import { SendNotification } from './send-notification';
+import { Notification } from '../entities/notification';
 
 const notificationsRepository = {
   async create(notification: Notification) {
