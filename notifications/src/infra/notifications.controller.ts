@@ -10,14 +10,14 @@ export class NotificationsController {
 
   @Get()
   list() {
-    return this.prisma.notifications.findMany();
+    return this.prisma.notification.findMany();
   }
 
   @Post()
   async create(@Body() body: CreateNotificationBody) {
     const { recipientId, content, category } = body;
 
-    await this.prisma.notifications.create({
+    await this.prisma.notification.create({
       data: {
         id: randomUUID(),
         recipientId,
