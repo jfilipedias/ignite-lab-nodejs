@@ -29,9 +29,7 @@ export class PrismaNotificationsRepository implements NotificationsRepository {
       },
     });
 
-    return notifications.map((notification) =>
-      PrismaNotificationMapper.toDomain(notification),
-    );
+    return notifications.map(PrismaNotificationMapper.toDomain);
   }
 
   async countManyByRecipientId(recipientId: string): Promise<number> {

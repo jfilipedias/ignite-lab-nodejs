@@ -9,6 +9,7 @@ export class HttpNotificationMapper {
       category: notification.category,
       readAt: notification.readAt,
       createdAt: notification.createdAt,
+      canceledAt: notification.canceledAt,
     };
   }
 }
